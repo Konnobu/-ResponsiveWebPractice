@@ -69,12 +69,13 @@ body {
 /* ヘッダー画像にキャッチコピーを重ねる */
 .top {
 	position: relative;
+	margin-bottom: 50px;
 }
 
 .catch {
 	position: absolute;
-	bottom: 7%;
-	left: 3%;
+	bottom: -20px;
+    left: 6%;
 }
 
 /* 概要 overview */
