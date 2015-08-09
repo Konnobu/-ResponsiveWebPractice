@@ -33,6 +33,7 @@ body {
 	padding: 25px 10px;
 	font-size: 14px;
 	text-decoration: none;
+	color: #000;
 }
 
 .menu li a:hover {
@@ -258,8 +259,8 @@ body {
 	font-size: 14px;
 }
 
-/* box5 をバーの形にする */
-.box5 {
+/* footer をバーの形にする */
+.footer {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	background-color:  #ddd;
@@ -267,36 +268,36 @@ body {
 }
 
 /* ボックスの左右 */
-.boxA,
-.box4,
-.box5,
-.box6 {
+.header,
+.info,
+.footer,
+.pickup {
 	padding-left: 15px;
 	padding-right: 15px;
 }
 
 /* ボックスの上下 */
-.boxA {
+.header {
 	padding-top: 20px;
 	padding-bottom: 10px;
 }
 
-.box4 {
+.info {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
-.box4-1 {
+.info-main {
 	padding-bottom: 20px;
 }
 
-.box6 {
+.pickup {
 	padding-top: 20px;
 }
 
-.box6-1,
-.box6-2,
-.box6-3 {
+.pickup-1,
+.pickup-2,
+.pickup-3 {
 	padding-bottom: 10px;
 }
 
@@ -311,8 +312,33 @@ body {
 
 /* キャッチコピー */
 .catch {
-	padding: 5px 10px;
-	font-size: 10px;
+	padding: 10px 15px;
+	font-size: 12px;
+	bottom: -50px;
+}
+
+}
+
+/* ######### 767px以下 ######### */
+@media (max-width: 767px) {
+
+/* ナビゲーションメニュー(縦並び) */
+.menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu li a {
+	display: block;
+	padding: 5px;
+	color: #000;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.menu li a:hover {
+	background-color: #eee;
 }
 
 }
@@ -320,31 +346,31 @@ body {
 /* ######### 768px以上 ######### */
 @media (min-width: 768px) {
 
-/* Box1 と Box2 を横に並べる設定 */
-.boxA:after {
+/* header-site と header-nav を横に並べる設定 */
+.header:after {
 	content: "";
 	display: block;
 	clear: both;
 }
 
-.box1 {
+.header-site {
 	float: left;
 	width: auto;
 }
 
-.box2 {
+.header-nav {
 	float: right;
 	width: auto;
 }
 
-/* box4-1 と box4-2 を横に並べる設定 */
-.box4:after {
+/* info-main と info-sub を横に並べる設定 */
+.info:after {
 	content ="";
 	display: block;
 	clear: both;
 }
 
-.box4-1 {
+.info-main {
 	float: left;
 	width: 70%;
 	padding-right: 35px;
@@ -353,31 +379,31 @@ body {
 	box-sizing: border-box;
 }
 
-.box4-2 {
+.info-sub {
 	float: left;
 	width: 30%;
 }
 
-/* box6-1, box6-2, box6-3 を横に並べる設定 */
-.box6:after {
+/* pickup-1, pickup-2, pickup-3 を横に並べる設定 */
+.pickup:after {
 	content: "";
 	display: block;
 	clear: both;
 }
 
-.box6-1 {
+.pickup-1 {
 	float: left;
 	width: 32%;
 	margin-right: 2%;
 }
 
-.box6-2 {
+.pickup-2 {
 	float: left;
 	width: 32%;
 	margin-right: 2%;
 }
 
-.box6-3 {
+.pickup-3 {
 	float: left;
 	width: 32%;
 }
@@ -388,18 +414,18 @@ body {
 @media (min-width: 1190px) {
 
 /* 全体の横幅を固定 */
-.box3,
-.box4,
-.boxA-inner,
-.box5-inner,
-.box6 {
+.photo,
+.info,
+.header-inner,
+.footer-inner,
+.pickup {
 	width: 1140px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-/* boxA の下に罫線を挿入 */
-.boxA {
+/* header の下に罫線を挿入 */
+.header {
 	margin-bottom: 1px;
 	border-bottom: solid 1px #ddd;
 }

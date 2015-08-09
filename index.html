@@ -6,18 +6,20 @@
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="fakeLoader/fakeLoader.css">
 </head>
 <body>
+<div id="fakeloader"></div>
 
-<div class="boxA">
-<div class="boxA-inner">
-<div class="box1">
+<div class="header">
+<div class="header-inner">
+<div class="header-site">
 	<div class="site">
 	<h1><a href="#"><img src="img/logo.png" width="300" height="33" alt="レスポンシブWEB" class="logo-img"></a></h1>
 	</div>
-</div><!-- Box1 -->
+</div><!-- header-site -->
 
-<div class="box2">
+<div class="header-nav">
 	<nav class="menu">
 	<ul>
 	<li><a href="#">トップ</a></li>
@@ -27,21 +29,21 @@
 	<li><a href="#">お問い合わせ</a></li>
 	</ul>
 	</nav>
-</div><!-- Box2 -->
-</div><!-- BoxA-inner -->
-</div><!-- BoxA -->
+</div><!-- header-nav -->
+</div><!-- header-inner -->
+</div><!-- header -->
 
 
-<div class="box3">
+<div class="photo">
 	<div class="top">
 	<img src="img/header.jpg" alt="" class="top-img">
 	<p class="catch">職人技でレスポンスシの可能性を切り開く、<br>
-	いま話題のレスポンスシ職人のサイトです。</p>
+	いま話題のレスポンスシのサイトです。</p>
 	</div>
-</div><!-- Box3 -->
+</div><!-- photo -->
 
-<div class="box6">
-<div class="box6-1">
+<div class="pickup">
+<div class="pickup-1">
 	<div class="overview">
 	<a href="#">
 	<i class="fa fa-fire"></i>
@@ -51,8 +53,8 @@
 	そこにレスポンスシへの情熱は宿るのです。</p>
 	</a>
 	</div>
-</div><!-- box6-1 -->
-<div class="box6-2">
+</div><!-- pickup-1 -->
+<div class="pickup-2">
 	<div class="overview">
 	<a href="#">
 	<i class="fa fa-code"></i>
@@ -63,8 +65,8 @@
 	しかし、IEのトリッキーな動きに対応するのは苦手です。</p>
 	</a>
 	</div>
-</div><!-- box6-2 -->
-<div class="box6-3">
+</div><!-- pickup-2 -->
+<div class="pickup-3">
 	<div class="overview">
 	<a href="#">
 	<i class="fa fa-flask"></i>
@@ -75,11 +77,11 @@
 	一途に探究し続けています。</p>
 	</a>
 	</div>
-</div><!-- box6-3 -->
-</div><!-- box6 -->
+</div><!-- pickup-3 -->
+</div><!-- pickup -->
 
-<div class="box4">
-<div class="box4-1">
+<div class="info">
+<div class="info-main">
 	<div class="news">
 	<h1>お知らせ</h1>
 	<ul>
@@ -101,35 +103,45 @@
 	</a></li>
 	</ul>
 	</div>
-</div><!-- Box4-1 -->
-<div class="box4-2">
+</div><!-- info-main -->
+<div class="info-sub">
 	<div class="follow">
-	<p class="follow-info">最新情報はこちらでも配信しています</p>
+	<p class="follow-info">レスポンスシ職人のSNSはこちら</p>
 	<ul>
-	<li><a href="#" class="follow-tw">
+	<li><a href="https://twitter.com/azuno_mix" target="_blank" class="follow-tw">
 		<i class="fa fa-fw fa-twitter"></i>
 		Twitter
 	</a></li>
-	<li><a href="#" class="follow-fb">
+	<li><a href="https://www.facebook.com/ryota.konno.169" target="_blank" class="follow-fb">
 		<i class="fa fa-fw fa-facebook"></i>
 		Facebook
 	</a></li>
-	<li><a href="#" class="follow-gp">
+	<li><a href="https://plus.google.com/101165974434683211252/" target="_blank" class="follow-gp">
 		<i class="fa fa-fw fa-google-plus"></i>
 		Google+
 	</a></li>
 	</ul>
 	</div>
-</div><!-- Box4-2-->
-</div><!-- Box4 -->
+</div><!-- info-sub-->
+</div><!-- info -->
 
-<div class="box5">
-<div class="box5-inner">
+<div class="footer">
+<div class="footer-inner">
 	<div class="copyright">
 	<p>Copyright &copy; レスポンスシWEB</p>
 	</div>
-</div><!-- Box5-inner -->
-</div><!-- Box5 -->
+</div><!-- footer-inner -->
+</div><!-- footer -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="fakeLoader/fakeLoader.min.js"></script>
+<script>
+	$("#fakeloader").fakeLoader({
+		timeToHide:3000,
+		zIndex:"999",
+		spinner:"spinner6",
+		bgColor:"#E6E5E1"
+	});
+</script>
 </body>
 </html>
