@@ -1,2 +1,3 @@
-# -ResponsiveWebPractice
+# ResponsiveWebPractice
 レスポンシブサイトの練習
+
