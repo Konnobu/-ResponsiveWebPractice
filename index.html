@@ -10,7 +10,7 @@
 <link rel="shortcut icon" href="img/favicon.ico" />
 </head>
 <body>
-<div id="fakeloader"></div>
+<div class="fakeloader"></div>
 
 <div class="header">
 <div class="header-inner">
@@ -21,13 +21,15 @@
 </div><!-- header-site -->
 
 <div class="header-nav">
+	<button type="button" class="menubtn">
+	<i class="fa fa-bars"></i><span>MENU</span>
+	</button>
 	<nav class="menu">
 	<ul>
 	<li><a href="#">トップ</a></li>
-	<li><a href="#">お知らせ</a></li>
-	<li><a href="#">店舗案内</a></li>
-	<li><a href="#">おいしさのヒミツ</a></li>
-	<li><a href="#">お問い合わせ</a></li>
+	<li><a href="#gaiyou">概要</a></li>
+	<li><a href="#new-article">新着記事</a></li>
+	<li><a href="#sns">SNS</a></li>
 	</ul>
 	</nav>
 </div><!-- header-nav -->
@@ -39,11 +41,15 @@
 	<div class="top">
 	<img src="img/header.jpg" alt="" class="top-img">
 	<p class="catch">レスポンシブとスシを合わせることで、<br>
-	無限の可能性が生まれると思う。</p>
+	無限の可能性が生まれると思う。<br>　
+	</p>
+	<p class="additionalDescription">
+	※何を言っているのか自分でもわからない
+	</p>
 	</div>
 </div><!-- photo -->
 
-<div class="pickup">
+<div class="pickup" id="gaiyou">
 <div class="pickup-1">
 	<div class="overview">
 	<a href="#">
@@ -90,32 +96,32 @@
 </div><!-- pickup -->
 
 <div class="info">
-<div class="info-main">
+<div class="info-main" id="new-article">
 	<div class="news">
-	<h1>お知らせ</h1>
+	<h1>新着記事</h1>
 	<ul>
 	<li><a href="#">
 		<time datetime="2015-08-09">08/10</time>
-		<div class="news-text">臨時休業のお知らせ</div>
+		<div class="news-text">レスポンシブWebデザインの調整を行う</div>
 	</a></li>
 	<li><a href="#">
-		<time datetime="2015-07-31">07/31</time>
-		<div class="news-text">お盆休みのお知らせ</div>
+		<time datetime="2015-07-31">08/05</time>
+		<div class="news-text">レイアウトの調整を行う</div>
 	</a></li>
 	<li><a href="#">
-		<time datetime="2015-04-15">04/15</time>
-		<div class="news-text">ゴールデンウィーク休業のお知らせ</div>
+		<time datetime="2015-04-15">07/31</time>
+		<div class="news-text">レスポンシブなBOXの並べ方</div>
 	</a></li>
 	<li><a href="#">
-		<time datetime="2015-01-05">01/05</time>
-		<div class="news-text">新春のご挨拶</div>
+		<time datetime="2015-01-05">07/29</time>
+		<div class="news-text">レスポンシブとは何なのか</div>
 	</a></li>
 	</ul>
 	</div>
 </div><!-- info-main -->
-<div class="info-sub">
+<div class="info-sub" id="sns">
 	<div class="follow">
-	<p class="follow-info">レスポンスシWEB作者のSNS</p>
+	<p class="follow-info">レスポンスシWEB作者のあれこれ</p>
 	<ul>
 	<li><a href="https://twitter.com/azuno_mix" target="_blank" class="follow-tw">
 		<i class="fa fa-fw fa-twitter"></i>
@@ -125,15 +131,17 @@
 		<i class="fa fa-fw fa-facebook"></i>
 		Facebook
 	</a></li>
-	<li><a href="https://plus.google.com/101165974434683211252/" target="_blank" class="follow-gp">
-		<i class="fa fa-fw fa-google-plus"></i>
-		Google+
+	<li><a href="http://azunobu.hatenablog.com/" target="_blank" class="read-hb">
+		<i class="fa fa-fw fa-book"></i>
+		はてなブログ
 	</a></li>
 	</ul>
 	</div>
 </div><!-- info-sub-->
 </div><!-- info -->
+<div class="contact">
 
+</div><!-- contact -->
 <div class="footer">
 <div class="footer-inner">
 	<div class="copyright">
@@ -145,11 +153,29 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="fakeLoader/fakeLoader.min.js"></script>
 <script>
-	$("#fakeloader").fakeLoader({
-		timeToHide:500,
-		zIndex:"999",
-		spinner:"spinner6",
-		bgColor:"#E6E5E1"
+	$(function() {
+		// fakeloader
+		$(".fakeloader").fakeLoader({
+			timeToHide:500,
+			zIndex:"999",
+			spinner:"spinner6",
+			bgColor:"#E6E5E1"
+		});
+
+		// メニュートグルボタン
+		$(".menubtn").click(function(){
+			$(".menu").slideToggle();
+		});
+
+		// スムーススクロールページリンク
+		$('a[href^=#]').click(function() {
+			var speed = 400;
+			var href= $(this).attr("href");
+			var target = $(href == "#" || href == "" ? 'html' : href);
+			var position = target.offset().top;
+			$('body,html').animate({scrollTop:position}, speed, 'swing');
+			return false;
+		});
 	});
 </script>
 </body>
